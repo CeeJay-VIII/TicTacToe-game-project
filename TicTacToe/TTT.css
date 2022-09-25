@@ -1,0 +1,203 @@
+*{
+    margin: 0px;
+    padding: 1px;
+    position:initial;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: 100%;
+}
+body{
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    background-image: url(/images/wallpaper/neonblack.jpg);
+}
+header{
+    background-color: #000000;
+    height: 10%;
+    margin: -1px;
+}
+header div{
+    display: flex;
+    width: 70%;
+}
+header div img{
+    padding-right: 20%;
+    width: 6%;
+}
+header div p{
+    position: relative;
+    width: 100%;
+}
+div.home{
+    justify-content: right;
+    position: relative;
+    text-indent: 40px;
+    margin-right: -40%;
+}
+.rad{
+    cursor: pointer;
+}
+.tuts{
+    background-color: #02028f34;
+    float: right;
+    border-radius: 10px;
+}
+.sign{
+    cursor: default;
+    float: right;
+}
+.info{
+    display: none;
+    color: white;
+}
+.tuts:hover>.info{
+    display: table;
+}
+p#options{
+    cursor: default;
+}
+table #cpuTurn,
+table #playerTurn{
+    margin-left: -25px;
+}
+select.select{
+    background-color: #ffffff36;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+select.select option{
+    font-size: xx-small;
+    background-color: #04850011;
+}
+tr td.wins{
+    font-family:'Courier New', Courier, monospace;
+}
+p#pWins,
+p#cWins{
+    text-shadow: 0px 2px 2px #02028f;
+}
+.board{
+    height: 80%;
+    min-width:50%;
+}
+.board .data{
+    background-color: #5c5c5c98;
+}
+.data table tr td{
+    text-indent: 30px;
+}
+.data table th{
+    padding-inline: 20px;
+}
+.TTT-VIII{
+    display: flex;
+    justify-content: center;
+    height: 390px;    
+}
+/*Progress bar*/
+.content{
+    background-color: #a07b7b50;
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px 2px rgba(255, 255, 255, 0.39);
+}
+.progress{
+    background-color: #1eff00;
+    width: 100%;
+    animation: animateProgress 5s forwards ease-out;
+}
+@keyframes animateProgress {
+    100%{width: 0%;}
+    0%{width: 100%;}
+}
+/*Progress bar end*/
+.TTT-VIII #TTT{
+    display:flex;
+    justify-content: center;
+    background-color: #21217a6e;
+    width: 90%;
+    box-shadow:0px 5px 35px 0px rgb(0, 0, 0);
+    border-radius: 6px;
+}
+#TTT.off{
+    pointer-events: none;
+}
+
+/*First player*/
+table.disabled{
+    pointer-events: none;
+}
+
+/*Game buttons / 6 slots*/
+table[table] tr td div{ /*Hidding the whole table*/
+    font-size: 0;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+}
+table#open tr td div{/*Displaying the whole table*/
+    display: flex;
+    justify-content: center;
+    background-color: #fce7cda6;
+    height: 90px;
+    width: 100px;
+    margin-inline: 6px;
+    font-weight: bolder;
+    font-size: 70px;
+    box-shadow: 0px 0px 10px 2px;
+    border-radius: 2px;
+    transition: 400ms ease-in-out;
+}
+table#open tr td div.disabled{
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(252, 156, 149, 0.603);
+    height: 90px;
+    width: 100px;
+    margin-inline: 6px;
+    font-weight: bolder;
+    font-size: 70px;
+    border-radius: 2px;
+    transition: 400ms ease-in-out;
+}
+table#open tr td div:hover{
+    box-shadow: 0px 0px 10px 5px rgba(0, 128, 0, 0.589);
+    transition: 300ms ease-in-out;
+}
+
+
+/*Footer*/
+footer{
+    background-color: #000000;
+    height: 14vh;
+}
+.Icons{
+    text-align: center;
+    margin-top: 20px;
+}
+footer a{
+    text-decoration: none;
+    margin: 10px;
+}
+footer a svg:hover{
+    transform: translate(0px,-8px);
+    transition: 150ms ease-in-out;
+}
+
+footer a #Youtube:hover{
+    fill: rgba(255, 0, 0, 0.925);
+}
+footer a #Whatsapp:hover{
+    fill: rgb(2, 161, 2);
+}
+footer a #Facebook:hover{
+    fill: #02028f;
+}
+footer a #Telegram:hover{
+    fill:rgb(52, 143, 235);
+}
+footer a #Github:hover{
+    fill: rgb(107, 5, 202);
+}
