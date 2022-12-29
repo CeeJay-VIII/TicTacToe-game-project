@@ -12,6 +12,7 @@ $(document).ready(function(){
 })
 /**Selecting disk and beginning the game */
 document.getElementById('disks').addEventListener('change',()=>{
+    $('div#disks div').fadeOut();
     player = document.querySelector('input.rad:checked').value;
     dificulty = document.getElementById('dificulty').value;
     document.getElementById('closed').id = 'open';
@@ -41,23 +42,19 @@ function getId(div){
     winner(div,'You');
     /**Dificulty level */
     if(dificulty=='Hard'){
-        console.log('dificulty==Hard()..')
         cpuTurn_Hard(div);
     }
     else if(dificulty=='Normal'){
-        console.log('dificulty==Normal()..')
         cpuTurn_Normal(div);
     }
     else{
         cpuTurn_Easy(div);
-        console.log('dificulty==Easy()..')
     }
 
     if(gResults==true && slotsNumber <= 9){
         if(slotsNumber!=9){
             document.getElementById('playerTurn').innerText = '✅Winner!';
             document.getElementById('cpuTurn').innerHTML=null;
-            console.log('player won..gResults==true but slotsNumber != 9')
         }
     }
     else{
@@ -299,7 +296,6 @@ function cpuTurn_Normal(div){
                 }
                 else{
                     cpuTurn_Easy(div);
-                    console.log('Normal() function calling Rondom()..')
                 }
             }
             else if(div.id=='r1c3'){ /**r1c3 slot clicked */
@@ -371,7 +367,6 @@ function cpuTurn_Normal(div){
                 }
                 else{
                     cpuTurn_Easy(div);
-                    console.log('Normal() function calling Rondom()..')
                 }
             }
             else if(div.id=='r2c1'){ /**r2c1 slot clicked */
@@ -421,7 +416,6 @@ function cpuTurn_Normal(div){
                 }
                 else{
                     cpuTurn_Easy(div);
-                    console.log('Normal() function calling Rondom()..')
                 }
             }
             else if(div.id=='r2c2'){ /**r2c2 slot clicked */
@@ -515,7 +509,6 @@ function cpuTurn_Normal(div){
                 }
                 else{
                     cpuTurn_Easy(div);
-                    console.log('Normal() function calling Rondom()..')
                 }
             }
             else if(div.id=='r2c3'){ /**r2c3 slot clicked */
@@ -565,7 +558,6 @@ function cpuTurn_Normal(div){
                 }
                 else{
                     cpuTurn_Easy(div);
-                    console.log('Normal() function calling Rondom()..')
                 }
             }
             else if(div.id=='r3c1'){ /**r3c1 slot clicked */
@@ -637,7 +629,6 @@ function cpuTurn_Normal(div){
                 }
                 else{
                     cpuTurn_Easy(div);
-                    console.log('Normal() function calling Rondom()..')
                 }
             }
             else if(div.id=='r3c2'){ /**r3c2 slot clicked */
@@ -687,7 +678,6 @@ function cpuTurn_Normal(div){
                 }
                 else{
                     cpuTurn_Easy(div);
-                    console.log('Normal() function calling Rondom()..')
                 }
             }
             else if(div.id=='r3c3'){ /**r3c3 slot clicked */
@@ -759,7 +749,6 @@ function cpuTurn_Normal(div){
                 }
                 else{
                     cpuTurn_Easy(div);
-                    console.log('Normal() function calling Rondom()..')
                 }
             }
             else{ /**else if none of the buttons clicked */
@@ -784,7 +773,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r1c2//////////////////
             else if(document.getElementById('r1c1').innerHTML==cpu && document.getElementById('r1c3').innerHTML==cpu && document.getElementById('r1c2').className=='free'){
@@ -796,7 +784,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r1c3//////////////////
             else if(document.getElementById('r1c1').innerHTML==cpu && document.getElementById('r1c2').innerHTML==cpu && document.getElementById('r1c3').className=='free'){
@@ -808,7 +795,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r1c1//////////////////
             else if(document.getElementById('r2c2').innerHTML==cpu && document.getElementById('r3c3').innerHTML==cpu && document.getElementById('r1c1').ClassName=='free'){
@@ -820,7 +806,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r2c2//////////////////
             else if(document.getElementById('r1c1').innerHTML==cpu && document.getElementById('r3c3').innerHTML==cpu && document.getElementById('r2c2').className=='free'){
@@ -832,7 +817,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r3c3//////////////////
             else if(document.getElementById('r1c1').innerHTML==cpu && document.getElementById('r2c2').innerHTML==cpu && document.getElementById('r3c3').className=='free'){
@@ -844,7 +828,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r1c1//////////////////
             else if(document.getElementById('r2c1').innerHTML==cpu && document.getElementById('r3c1').innerHTML==cpu && document.getElementById('r1c1').className=='free'){
@@ -856,7 +839,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r2c1//////////////////
             else if(document.getElementById('r1c1').innerHTML==cpu && document.getElementById('r3c1').innerHTML==cpu && document.getElementById('r2c1').className=='free'){
@@ -868,7 +850,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r3c1//////////////////
             else if(document.getElementById('r1c1').innerHTML==cpu && document.getElementById('r2c1').innerHTML==cpu && document.getElementById('r3c1').className=='free'){
@@ -880,7 +861,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r1c2/////////////////
             else if(document.getElementById('r2c2').innerHTML==cpu && document.getElementById('r3c2').innerHTML==cpu && document.getElementById('r1c2').className=='free'){
@@ -892,7 +872,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r2c2/////////////////
             else if(document.getElementById('r1c2').innerHTML==cpu && document.getElementById('r3c2').innerHTML==cpu && document.getElementById('r2c2').className=='free'){
@@ -904,7 +883,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r3c2/////////////////
             else if(document.getElementById('r1c2').innerHTML==cpu && document.getElementById('r2c2').innerHTML==cpu && document.getElementById('r3c2').className=='free'){
@@ -916,7 +894,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r1c3/////////////////
             else if(document.getElementById('r2c2').innerHTML==cpu && document.getElementById('r3c1').innerHTML==cpu && document.getElementById('r1c3').className=='free'){
@@ -928,7 +905,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r2c2//////////////////
             else if(document.getElementById('r1c3').innerHTML==cpu && document.getElementById('r3c1').innerHTML==cpu && document.getElementById('r2c2').innerHTML=='free'){
@@ -940,7 +916,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r3c1//////////////////
             else if(document.getElementById('r1c3').innerHTML==cpu && document.getElementById('r2c2').innerHTML==cpu && document.getElementById('r3c1').className=='free'){
@@ -952,7 +927,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r1c3////////////////
             else if(document.getElementById('r2c3').innerHTML==cpu && document.getElementById('r3c3').innerHTML==cpu && document.getElementById('r1c3').className=='free'){
@@ -964,7 +938,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r2c3////////////////
             else if(document.getElementById('r1c3').innerHTML==cpu && document.getElementById('r3c3').innerHTML==cpu && document.getElementById('r2c3').className=='free'){
@@ -976,7 +949,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r3c3///////////////
             else if(document.getElementById('r1c3').innerHTML==cpu && document.getElementById('r2c3').innerHTML==cpu && document.getElementById('r3c3').className=='free'){
@@ -988,7 +960,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r2c1///////////////
             else if(document.getElementById('r2c2').innerHTML==cpu && document.getElementById('r2c3').innerHTML==cpu && document.getElementById('r2c1').className=='free'){
@@ -1000,7 +971,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r2c2///////////////
             else if(document.getElementById('r2c1').innerHTML==cpu && document.getElementById('r2c3').innerHTML==cpu && document.getElementById('r2c2').className=='free'){
@@ -1012,7 +982,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r2c3///////////////
             else if(document.getElementById('r2c1').innerHTML==cpu && document.getElementById('r2c2').innerHTML==cpu && document.getElementById('r2c3').className=='free'){
@@ -1024,7 +993,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r3c1///////////////
             else if(document.getElementById('r3c2').innerHTML==cpu && document.getElementById('r3c3').innerHTML==cpu && documen.getElementById('r3c1').className=='free'){
@@ -1036,7 +1004,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r3c2///////////////
             else if(document.getElementById('r3c1').innerHTML==cpu && document.getElementById('r3c3').innerHTML==cpu && document.getElementById('r3c2').className=='free'){
@@ -1048,7 +1015,6 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//r3c3////////////////
             else if(document.getElementById('r3c1').innerHTML==cpu && document.getElementById('r3c2').innerHTML==cpu && document.getElementById('r3c3').className=='free'){
@@ -1060,12 +1026,10 @@ function cpuTurn_Hard(div){
                 if(gResults!=true){ /**only if game is not over, player will be playing... */
                     document.getElementById('cpuTurn').innerText = null;
                     document.getElementById('playerTurn').innerText = '🧠Playing...';
-                    console.log('function Hard() executed...gResults!=true')
                 }
             }//execute function Normal()
             else{
                 cpuTurn_Normal(div);
-                console.log('Hard() function calling normal()..')
             }
         }, 2000);
     }
@@ -1154,7 +1118,6 @@ function winner(div,winner){
         document.getElementById('cpuTurn').innerText = '💫Draw';
         winner = 'Draw';
         gameOver(true,winner);
-        console.log('Draw -if- executed!')
     }
 }
 

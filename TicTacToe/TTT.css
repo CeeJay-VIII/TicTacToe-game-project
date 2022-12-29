@@ -28,9 +28,18 @@ header div img{
 header div p{
     position: relative;
     width: 100%;
+    color: honeydew;
+}
+body > header > div > p > a{
+    color: honeydew;
+    text-decoration: none;
+}
+body > header > div > p > a:hover{
+    color: #02028f;
+    text-decoration: underline;
 }
 div.home{
-    justify-content: right;
+    justify-content: flex-end;
     position: relative;
     text-indent: 40px;
     margin-right: -40%;
@@ -66,9 +75,10 @@ select.select{
     border: none;
     outline: none;
     border-radius: 2px;
+    padding: 5px;
 }
 select.select option{
-    font-size: xx-small;
+    font-size: initial;
     background-color: #04850011;
 }
 tr td.wins{
@@ -79,11 +89,12 @@ p#cWins{
     text-shadow: 0px 2px 2px #02028f;
 }
 .board{
-    height: 80%;
+    height: 82%;
     min-width:50%;
 }
 .board .data{
     background-color: #5c5c5c98;
+    padding: 10px;
 }
 .data table tr td{
     text-indent: 30px;
@@ -94,7 +105,8 @@ p#cWins{
 .TTT-VIII{
     display: flex;
     justify-content: center;
-    height: 390px;    
+    height: 390px;
+    margin: 10px 0px 0px 0px;  
 }
 /*Progress bar*/
 .content{
@@ -163,7 +175,7 @@ table#open tr td div.disabled{
     transition: 400ms ease-in-out;
 }
 table#open tr td div:hover{
-    box-shadow: 0px 0px 10px 5px rgba(0, 128, 0, 0.589);
+    box-shadow: 0px 0px 10px 2px #00800096;
     transition: 300ms ease-in-out;
 }
 
